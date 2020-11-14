@@ -5,14 +5,20 @@ class User{
     public $username;
     public $email;
 
+    function __construct($name,$username,$email)
+    {
+        $this->name = $name;
+        $this->username = $username;
+        $this->email = $email;
+    }
     public function addFriend(){
-        echo "You added a friend."."<br>";
+        echo $this->name." added a friend."."<br>";
     }
     public function postStatus(){
-        echo "You posted a status"."<br>";
+        echo $this->name." posted a status"."<br>";
     }
 }
-
-$example = new User();
+// name, username, email
+$example = new User("Timothy","timo0802","tmbrccl@gmail.com");
 echo $example->addFriend();
 echo $example->postStatus();
